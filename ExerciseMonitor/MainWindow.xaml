@@ -1,0 +1,40 @@
+﻿<Window x:Class="ExerciseMonitor.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ExerciseMonitor"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+
+        <TabControl>
+            <TabItem Header="TabItem">
+
+                <Grid Background="#FFE5E5E5">
+                    <TextBox x:Name="num_textbox" HorizontalAlignment="Left" Margin="181,21,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="264" Height="43" FontSize="25" />
+                    <TextBox x:Name="date_textbox" HorizontalAlignment="Left" Margin="491,21,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="264" Height="45" FontSize="25"/>
+                    <TextBox x:Name="distance_textbox" HorizontalAlignment="Left" Margin="181,139,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="264" Height="37" FontSize="25"/>
+                    <TextBox x:Name="time_textbox" HorizontalAlignment="Left" Margin="181,203,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="264" Height="43" FontSize="25"/>
+                    <TextBox x:Name="calories_textbox" HorizontalAlignment="Left" Margin="181,259,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="264" Height="45" FontSize="25"/>
+                    <Button x:Name="insert_button" Content="Button" HorizontalAlignment="Left" Margin="508,318,0,0" VerticalAlignment="Top" Height="44" Width="184" Click="insert_button_Click" FontSize="25"/>
+                    <Label x:Name="num_label" Content="Día num: " HorizontalAlignment="Left" Margin="20,21,0,0" VerticalAlignment="Top" Width="155" Height="35" FontSize="20"/>
+                    <Label x:Name="date_label" Content="Fecha:" HorizontalAlignment="Left" Margin="20,80,0,0" VerticalAlignment="Top" Width="135" Height="35" FontSize="20"/>
+                    <Label x:Name="distance_label" Content="Distancia:" HorizontalAlignment="Left" Margin="20,139,0,0" VerticalAlignment="Top" Width="135" Height="35" FontSize="20"/>
+                    <Label x:Name="time_label" Content="Tiempo:" HorizontalAlignment="Left" Margin="20,203,0,0" VerticalAlignment="Top" Width="135" Height="35" FontSize="20"/>
+                    <Label x:Name="calories_label" Content="calorias:" HorizontalAlignment="Left" Margin="20,259,0,0" VerticalAlignment="Top" Width="135" Height="35" FontSize="20"/>
+                    <Button x:Name="second_button" Content="Button" HorizontalAlignment="Left" Margin="530,199,0,0" VerticalAlignment="Top" Height="43" Width="140" Click="Dissconnect"/>
+                    <DatePicker x:Name="datepicker" HorizontalAlignment="Left" Margin="181,80,0,0" VerticalAlignment="Top" Height="45" Width="264" DisplayDate="2022-08-20" FontSize="25"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="TabItem">
+                <Grid Background="#FFE5E5E5">
+                    <DataGrid Name="Exs_DataGrid" x:FieldModifier="public" Height="350" Margin="20,10,20,46" SelectionChanged="DataGrid_SelectionChanged"/>
+                    <Button Content="Refresh" HorizontalAlignment="Left" Margin="613,0,0,10" VerticalAlignment="Bottom" Height="30" Width="160" Click="Refresh_button_click"/>
+                    <Button Content="Get data" HorizontalAlignment="Left" Margin="437,0,0,11" VerticalAlignment="Bottom" Width="160" Height="30" Click="Erase_row" IsEnabled="True"/>
+                    <Button x:Name="Erase_button" Content="Erase" HorizontalAlignment="Left" Margin="258,366,0,0" VerticalAlignment="Top" Width="160" Height="30" Click="Erase"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
